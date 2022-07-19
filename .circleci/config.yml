@@ -7,10 +7,9 @@ jobs:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
-      - add_ssh_keys
+      - add_ssh_keys:
           fingerprints:
-            - 
-            "c2:bd:88:0f:81:b0:1d:40:e1:32:35:ab:48:e4:66:96"
+            - "c2:bd:88:0f:81:b0:1d:40:e1:32:35:ab:48:e4:66:96"
       - checkout
       - run:
           name: Install
